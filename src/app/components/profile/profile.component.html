@@ -1,0 +1,36 @@
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <button type="button" class="btn btn-success" (click)="redirect()">Agregar Nuevo</button>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <button type="button" class="btn btn-danger" (click)="exit()">Cerrar Sesion</button>
+        </div>
+      </form>
+<br><br>
+<div class="row">
+    <div class="col">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Edad</th>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.nombre}}</td>
+                        <td>{{user.apPat}}</td>
+                        <td>{{user.apMat}}</td>
+                        <td>{{user.edad}}</td>
+                        <td><button type="button" class="btn btn-warning" (click)="edit(user.id)">Editar</button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="delet(user.id)">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

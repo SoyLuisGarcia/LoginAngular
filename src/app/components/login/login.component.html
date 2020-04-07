@@ -1,0 +1,21 @@
+<div class="container">
+<div class="card border-dark mb-6" style="max-width: 29rem;">
+    <div class="card-header">Login</div>
+    <div class="card-body text-dark">
+        <form [formGroup]="login"  autocomplete="off">
+            <div class="form-group">
+              <label for="exampleInputEmail1" >Username</label>
+              <input  formControlName="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+              <small id="emailHelp" class="form-text text-muted">No compartas tu contraseña con nadie más.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="Login(login.value)">Submit</button>
+          </form>
+    </div>
+  </div>
+  
+</div>
